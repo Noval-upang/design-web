@@ -4,7 +4,7 @@ export function About () {
    return (
       <div className="grid items-center bg-[#f1ea05]" id="about">
          <div className="flex">
-            <img src="poster.png" alt="My photo" className="w-1/3"/>
+            <img src="poster.png" alt="My dwadaadad" className="w-1/3"/>
             <div className="p-2">
                <Title class="" context="About us"/>
                <p className="text-sm mt-2">
