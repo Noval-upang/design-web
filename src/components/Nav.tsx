@@ -37,10 +37,10 @@ export default function () {
                   <div className="sm:hidden text-right">
                      <span className="material-symbols-outlined m-2" id="close">close</span>
                   </div>
-                  <a href="" className={link}>Home</a>
-                  <a href="" className={link}>About us</a>
-                  <a href="" className={link}>Our Project</a>
-                  <a href="" className={link}>Contact</a>
+                  <a href="/" className={link}>Home</a>
+                  <a href="/about" className={link}>About us</a>
+                  <a href="/proj" className={link}>Our Project</a>
+                  <a href="/contact" className={link}>Contact</a>
                </div>
             </div>
          </nav>
