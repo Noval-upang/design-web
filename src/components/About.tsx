@@ -1,6 +1,6 @@
 import { Title } from "./Helper";
 
-export default function () {
+export function About () {
    return (
       <div className="grid items-center bg-[#f1ea05]" id="about">
          <div className="flex">

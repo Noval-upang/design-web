@@ -1,6 +1,6 @@
 import { Card, Title } from "./Helper";
 
-export default function () {
+export function Proj () {
    return <div className="bg-[#3c933c] p-4" id="proj">
       <Title class="border-white text-white" context="Project"/>
       <div className="grid grid-cols-2 gap-4 mt-4" id="proj">

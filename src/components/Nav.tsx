@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-export default function () {
+export function Nav () {
    const link = "border-b border-black hover:opacity-75 m-2 text-md font-medium"
    useEffect(()=>{
       const menu = document.getElementById("menu")

@@ -1,6 +1,6 @@
 import { Title } from "./Helper";
 
-export default function () {
+export function Contact () {
    return (
       <div className="p-4 bg-black text-white">
          <Title class="border-white" context="Contact" />
