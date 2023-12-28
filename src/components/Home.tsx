@@ -20,7 +20,7 @@ export function Home () {
    
    useEffect(()=>{
       console.log(state)
-   }, [JSON.stringify(state)])
+   })
 
    return (<>
       <input style={{border:"1px solid"}} type="text" onChange={(e)=>setName(e.target.value)} value={name} onKeyDown={(e)=>{
