@@ -7,7 +7,7 @@ function submit(props:any[]) {
       .create({baseURL:process.env.REACT_APP_API})
       .post(
          "/add", 
-         {data : props}, 
+         {data : JSON.stringify(props)}, 
          {headers:{
             "Content-Type" : "application/json"
          }}) 
@@ -32,8 +32,8 @@ export function Home () {
       <button style={{border:"1px solid"}} onClick={()=>
          submit(state)
             .then((i)=>{
-               const data= i.data.data as any[]
-               document.getElementById("res")!.innerHTML = data.join(" ")
+               const data= i.data.data 
+               document.getElementById("res")!.innerHTML = data
             })
       }>submit</button>
       <div id="res"></div>
