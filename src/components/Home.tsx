@@ -28,7 +28,7 @@ export function Home () {
       <button style={{border:"1px solid"}} onClick={()=>
          submit(state)
             .then((i)=>{
-               const data= i.data as any[]
+               const data= i.data.data as any[]
                document.getElementById("res")!.innerHTML = data.join(" ")
             })
       }>submit</button>
