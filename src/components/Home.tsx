@@ -32,6 +32,7 @@ export function Home () {
       <button style={{border:"1px solid"}} onClick={()=>
          submit(state)
             .then((i)=>{
+               console.log(i.data)
                const data= i.data.data 
                document.getElementById("res")!.innerHTML = data
             })
