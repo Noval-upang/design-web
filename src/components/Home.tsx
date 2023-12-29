@@ -39,10 +39,11 @@ export function Home () {
       }>submit</button>
 
       <button style={{border:"1px solid"}} onClick={()=>
-         submit(state, "/test")
-            .then((i)=>{
-               
-               document.getElementById("res")!.innerHTML = i.data.data
+         axios
+            .create({baseURL:process.env.REACT_APP_API})
+            .get("/test")
+            .then(res=>{
+               document.getElementById("res")!.innerHTML = res.data.data
             })
       }>test</button>
       <div id="res"></div>
