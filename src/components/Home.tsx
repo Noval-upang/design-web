@@ -32,8 +32,8 @@ export function Home () {
       <button style={{border:"1px solid"}} onClick={()=>
          submit(state)
             .then((i)=>{
-               console.log(i.data)
-               const data= i.data.data 
+               
+               const data= Object.entries(i.data).join(" ")
                document.getElementById("res")!.innerHTML = data
             })
       }>submit</button>
