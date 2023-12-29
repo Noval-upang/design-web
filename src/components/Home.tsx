@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 function submit(props:any[], url: string) {
    return axios
-      .create({baseURL:"http://be-design-production.up.railway.app"})
+      .create({baseURL:"https://be-design-production.up.railway.app"})
       .post(
          url, 
          {data : JSON.stringify(props)}, 
