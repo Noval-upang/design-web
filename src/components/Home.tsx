@@ -2,11 +2,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function submit(props:any[]) {
+function submit(props:any[], url: string) {
    return axios
       .create({baseURL:process.env.REACT_APP_API})
       .post(
-         "/add", 
+         url, 
          {data : JSON.stringify(props)}, 
          {headers:{
             "Content-Type" : "application/json"
@@ -30,13 +30,21 @@ export function Home () {
          }
       }}/>
       <button style={{border:"1px solid"}} onClick={()=>
-         submit(state)
+         submit(state, "/add")
             .then((i)=>{
                
                const data= Object.entries(i.data).join(" ")
                document.getElementById("res")!.innerHTML = data
             })
       }>submit</button>
+
+      <button style={{border:"1px solid"}} onClick={()=>
+         submit(state, "/test")
+            .then((i)=>{
+               
+               document.getElementById("res")!.innerHTML = i.data.data
+            })
+      }>test</button>
       <div id="res"></div>
    </>)
 }
