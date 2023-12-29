@@ -9,7 +9,7 @@ function submit(props:any[], url: string) {
          url, 
          {data : JSON.stringify(props)}, 
          {headers:{
-            "Content-Type" : "application/json"
+            setContentType: "application/json"
          }}) 
 }
 
