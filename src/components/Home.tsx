@@ -44,7 +44,7 @@ export function Home () {
             .get("/test")
             .then(res=>{
                document.getElementById("res")!.innerHTML = res.data.data
-            })
+            }).catch((err)=>console.log("error"))
       }>test</button>
       <div id="res"></div>
    </>)
