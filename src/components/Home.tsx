@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const API = axios.create({baseURL:"be-design-production.up.railway.app"})
+const API = axios.create({baseURL:"http://be-design-production.up.railway.app"})
 
 function submit(props:any[], url: string) {
    return API
@@ -38,7 +38,7 @@ export function Home () {
       <button style={{border:"1px solid"}} onClick={()=>
          submit(state, "/add")
             .then((i)=>{
-               console.log(i.data)
+               console.log(i)
                document.getElementById("res")!.innerHTML = String(i.data)
             })
       }>submit</button>
