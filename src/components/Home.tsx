@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const API = axios.create({baseURL:"http://be-design-production.up.railway.app"})
+const API = axios.create({baseURL:"https://be-design-production.up.railway.app"})
 
 function submit(props:any[], url: string) {
    return API
