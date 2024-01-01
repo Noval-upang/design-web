@@ -1,16 +1,23 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+const API = axios.create({baseURL:"be-design-production.up.railway.app"})
+
 function submit(props:any[], url: string) {
-   return axios
-      .create({baseURL:"be-design-production.up.railway.app"})
+   return API
       .post(
          url, 
          {data : JSON.stringify(props)}, 
-         {headers:{
-            setContentType: "application/json"
-         }}) 
+         {
+            headers:
+               {
+                  "Content-Type": "application/json",
+                  hasAccept:true
+               }
+         }) 
 }
+
+
 
 export function Home () {
    const 
@@ -38,8 +45,7 @@ export function Home () {
       }>submit</button>
 
       <button style={{border:"1px solid"}} onClick={()=>
-         axios
-            .create({baseURL:"be-design-production.up.railway.app"})
+         API
             .get("/test")
             .then(res=>{
                console.log(res.data)
