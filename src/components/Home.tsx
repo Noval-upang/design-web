@@ -38,9 +38,7 @@ export function Home () {
       <button style={{border:"1px solid"}} onClick={()=>
          submit(state, "/add")
             .then((i)=>{
-               console.log(i.data)
-               const data= Object.entries(i.data).join(" ")
-               document.getElementById("res")!.innerHTML = data
+               document.getElementById("res")!.innerHTML = String(i.data)
             })
       }>submit</button>
 
@@ -48,8 +46,8 @@ export function Home () {
          API
             .get("/test")
             .then(res=>{
-               console.log(res.data)
-               document.getElementById("res")!.innerHTML = res.data
+               console.log(String(res.data))
+               document.getElementById("res")!.innerHTML = String(res.data)
             }).catch((err)=>console.log("err"))
       }>test</button>
       <div id="res"></div>
