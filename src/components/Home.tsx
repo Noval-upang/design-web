@@ -12,7 +12,7 @@ function submit(props:any[], url: string) {
             headers:
                {
                   "Content-Type": "application/json",
-                  hasAccept:true
+                  "Accept": "application/json"
                }
          }) 
 }
