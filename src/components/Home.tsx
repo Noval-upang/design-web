@@ -39,7 +39,7 @@ export function Home () {
 
       <button style={{border:"1px solid"}} onClick={()=>
          axios
-            .create({baseURL:"https://be-design-production.up.railway.app"})
+            .create({baseURL:"be-design-production.up.railway.app"})
             .get("/test")
             .then(res=>{
                document.getElementById("res")!.innerHTML = res.data.data
