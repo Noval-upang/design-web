@@ -42,7 +42,7 @@ export function Home () {
             .create({baseURL:"be-design-production.up.railway.app"})
             .get("/test")
             .then(res=>{
-               document.getElementById("res")!.innerHTML = res.data.data
+               document.getElementById("res")!.innerHTML = res.data
             }).catch((err)=>console.log("err"))
       }>test</button>
       <div id="res"></div>
