@@ -38,6 +38,7 @@ export function Home () {
       <button style={{border:"1px solid"}} onClick={()=>
          submit(state, "/add")
             .then((i)=>{
+               console.log(i.data)
                document.getElementById("res")!.innerHTML = String(i.data)
             })
       }>submit</button>
